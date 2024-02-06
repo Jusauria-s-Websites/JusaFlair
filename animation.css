@@ -1,0 +1,34 @@
+/* --- Animation types --- */
+.animation_blink {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+/* --- Repeats --- */
+.animation_infinity {
+    animation-iteration-count: infinite;
+}
+
+/* --- Delays --- */
+.animation_delay1s {
+    animation-delay: 1s;
+}
+
+/* --- Animation Keyframes --- */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
