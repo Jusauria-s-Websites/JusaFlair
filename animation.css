@@ -1,68 +1,83 @@
 /* --- Animation types --- */
-.animation_blink {
+.juflair_blink {
     animation-name: blink ;
     animation-duration: 1s;
 }
 /* .Delayed*/
-.animation_blink1_Delayed{
+.juflair_blink1_Delayed{
     animation-name: delay-blink ;
     animation-duration: 1s;
 }
-.animation_blink2_Delayed{
+.juflair_blink2_Delayed{
     animation-name: delay-blink2 ;
     animation-duration: 1s;
 }
 
-.animation_rotate {
+.juflair_rotate {
     animation-name: rotate ;
     animation-duration: 1s;
 }
 
 /* --- Repeats (REP) --- */
-.animation_rep_inf {
+.juflair_rep_inf {
     animation-iteration-count: infinite;
 }
-.animation_rep_1 {
+.juflair_rep_1 {
     animation-iteration-count: 1;
 }
-.animation_rep_2 {
+.juflair_rep_2 {
     animation-iteration-count: 2;
 }
-.animation_rep_3 {
+.juflair_rep_3 {
     animation-iteration-count: 3;
 }
 
 /* --- Delays (DEL) --- */
-.animation_del_1s {
+.juflair_del_1s {
     animation-delay: 1s;
 }
-.animation_del_2s {
+.juflair_del_1-5s {
+    animation-delay: 1.5s;
+}
+.juflair_del_2s {
     animation-delay: 2s;
 }
-.animation_del_3s {
+.juflair_del_2-5s {
+    animation-delay: 2.5s;
+}
+.juflair_del_3s {
     animation-delay: 3s;
 }
-.animation_del_4s {
+.juflair_del_3-5s {
+    animation-delay: 3.5s;
+}
+.juflair_del_4s {
     animation-delay: 4s;
 }
-.animation_del_5s {
+.juflair_del_4-5s {
+    animation-delay: 4s;
+}
+.juflair_del_5s {
     animation-delay: 5s;
+}
+.juflair_del_5s {
+    animation-delay: 5.5s;
 }
 
 /* --- Speed (SPE) --- */
-.animation_spe_light {
+.juflair_spe_light {
     animation-duration: .5s;
 }
-.animation_spe_fast {
+.juflair_spe_fast {
     animation-duration: 1s;
 }
-.animation_spe_normal {
+.juflair_spe_normal {
     animation-duration: 1.5s;
 }
-.animation_spe_slow {
+.juflair_spe_slow {
     animation-duration: 3s;
 }
-.animation_spe_slowmotion {
+.juflair_spe_slowmotion {
     animation-duration: 5s;
 }
 /* --- Animation Keyframes --- */
