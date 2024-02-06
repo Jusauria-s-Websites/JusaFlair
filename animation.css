@@ -1,6 +1,6 @@
 /* --- Animation types --- */
 .animation_blink {
-    animation-name: blink;
+    animation: blink;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
