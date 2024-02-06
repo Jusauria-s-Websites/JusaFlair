@@ -3,63 +3,70 @@
     animation-name: blink ;
     animation-duration: 1s;
 }
+/* .Delayed*/
+.animation_blink1_Delayed{
+    animation-name: delay-blink ;
+    animation-duration: 1s;
+}
+.animation_blink2_Delayed{
+    animation-name: delay-blink2 ;
+    animation-duration: 1s;
+}
+
 .animation_rotate {
     animation-name: rotate ;
     animation-duration: 1s;
 }
 
-/* --- Repeats --- */
-.animation_infinity {
+/* --- Repeats (REP) --- */
+.animation_rep_inf {
     animation-iteration-count: infinite;
 }
-.animation_repeat1 {
+.animation_rep_1 {
     animation-iteration-count: 1;
 }
-.animation_repeat2 {
+.animation_rep_2 {
     animation-iteration-count: 2;
 }
-.animation_repeat3 {
+.animation_rep_3 {
     animation-iteration-count: 3;
 }
-.animation_delayOnRepeat{
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
 
-/* --- Delays --- */
-.animation_delay1s {
+/* --- Delays (DEL) --- */
+.animation_del_1s {
     animation-delay: 1s;
 }
-.animation_delay2s {
+.animation_del_2s {
     animation-delay: 2s;
 }
-.animation_delay3s {
+.animation_del_3s {
     animation-delay: 3s;
 }
-.animation_delay4s {
+.animation_del_4s {
     animation-delay: 4s;
 }
-.animation_delay5s {
+.animation_del_5s {
     animation-delay: 5s;
 }
 
-/* --- Speed --- */
-.animation_lightspeed {
+/* --- Speed (SPE) --- */
+.animation_spe_light {
     animation-duration: .5s;
 }
-.animation_fast {
+.animation_spe_fast {
     animation-duration: 1s;
 }
-.animation_normal {
+.animation_spe_normal {
     animation-duration: 1.5s;
 }
-.animation_slow {
+.animation_spe_slow {
     animation-duration: 3s;
 }
-.animation_slowmotion {
+.animation_spe_slowmotion {
     animation-duration: 5s;
 }
 /* --- Animation Keyframes --- */
+/* Blink */
 @keyframes blink {
     0% {
         opacity: 1;
@@ -71,6 +78,22 @@
         opacity: 1;
     }
 }
+@keyframes delay-blink {
+    40%{ opacity: 1; }
+    50% { opacity: 0; }
+    60% { opacity: 1; }
+}
+@keyframes delay-blink2 {
+    40%{ opacity: 1; }
+    
+    50% { opacity: 0; }
+    60% { opacity: 1; }
+
+    70% { opacity: 0; }
+    80%{ opacity: 1; }
+}
+
+/* Rotate */
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -79,11 +102,13 @@
         transform: rotate(360deg);
     }
 }
+
+/* Moving */
 @keyframes movingFromBottomrightTOTopLeft{
     0% {
         background-position: bottom right ;
-      }
-      100% {
+    }
+    100% {
         background-position: top left;
-      }
+    }
 }
