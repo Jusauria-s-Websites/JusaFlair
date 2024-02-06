@@ -2,7 +2,7 @@
 .animation_blink {
     animation-name: blink;
     animation-duration: 1s;
-    animation-iteration-count: 1;
+    animation-iteration-count: infinite;
 }
 
 /* --- Repeats --- */
@@ -31,4 +31,12 @@
     100% {
         transform: rotate(360deg);
     }
+}
+@keyframes movingFromBottomrightTOTopLeft{
+    0% {
+        background-position: bottom right ;
+      }
+      100% {
+        background-position: top left;
+      }
 }
