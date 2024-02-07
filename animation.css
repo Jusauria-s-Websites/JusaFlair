@@ -56,22 +56,22 @@
 }
 /* --- Speed (SPE) --- */
 .juflair_spe_light {
-    animation-duration: .2s;
+    animation-duration: .2s !important;
 }
 .juflair_spe_fast {
-    animation-duration: 0.5s;
+    animation-duration: 0.5s !important;
 }
 .juflair_spe_normal {
-    animation-duration: 1s;
+    animation-duration: 1s !important;
 }
 .juflair_spe_slow {
-    animation-duration: 3s;
+    animation-duration: 3s !important;
 }
 .juflair_spe_slowmotion {
-    animation-duration: 5s;
+    animation-duration: 5s !important;
 }
 .juflair_spe_snail {
-    animation-duration: 10s;
+    animation-duration: 10s !important;
 }
 /* --- Animation types --- */
 .juflair_blink {
