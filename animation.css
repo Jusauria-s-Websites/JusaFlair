@@ -105,6 +105,13 @@
     animation-duration: 1s;
     
 }
+.juflair_zoomOut {
+    animation-name: zoomOut ;
+    animation-duration: 1s;
+}
+.juflair_zoomInOut {
+   animation: zoomOut 1s 1s linear 1 alternate, zoomIn 1s linear alternate
+}
 .juflair_pulse {
     animation-name: pulse ;
     animation-duration: 1s;
@@ -203,6 +210,10 @@
 @keyframes zoomIn {
     from { transform: scale(0); }
     to { transform: scale(1); }
+}
+@keyframes zoomOut {
+    from { transform: scale(1); }
+    to { transform: scale(0); }
 }
 @keyframes pulse {
     0%{ transform: scale(1); }

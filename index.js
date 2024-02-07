@@ -11,12 +11,16 @@ let animationsArray=[
     'juflair_flip',
     'juflair_shake',
     'juflair_blink1_Delayed',
-    'juflair_blink2_Delayed'
+    'juflair_blink2_Delayed',
+    'juflair_zoomOut',
+    'juflair_zoomInOut'
 ]
 
 function newAdd(addToImage){
     let image = document.getElementById('exampleImage');
     image.classList=['col-3'];
+    void image.offsetWidth;
     image.classList.add(animationsArray[addToImage])
+    //image.classList=['col-3'];
     
 }
