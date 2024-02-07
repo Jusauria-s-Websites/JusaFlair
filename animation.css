@@ -3,13 +3,13 @@
 }
 /* --- Repeats (REP) --- */
 .juflair_rep_inf {
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite !important;
 }
 .juflair_rep_2 {
-    animation-iteration-count: 2;
+    animation-iteration-count: 2 !important;
 }
 .juflair_rep_3 {
-    animation-iteration-count: 3;
+    animation-iteration-count: 3 !important;
 }
 
 /* --- Delays (DEL) --- */
