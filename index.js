@@ -16,9 +16,7 @@ let animationsArray=[
 
 function newAdd(addToImage){
     let image = document.getElementById('exampleImage');
-    if(!image.classList.contains(animationsArray[addToImage])){
-        image.classList.add(animationsArray[addToImage]);
-    }else{
-        image.classList.remove(animationsArray[addToImage]);
-    }
+    image.classList=['col-3'];
+    image.classList.add(animationsArray[addToImage])
+    
 }
