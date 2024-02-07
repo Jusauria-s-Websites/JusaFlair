@@ -70,6 +70,9 @@
 .juflair_spe_slowmotion {
     animation-duration: 5s;
 }
+.juflair_spe_snail {
+    animation-duration: 10s;
+}
 /* --- Animation types --- */
 .juflair_blink {
     animation-name: blink ;
@@ -110,7 +113,7 @@
     animation-duration: 1s;
 }
 .juflair_zoomInOut {
-   animation: zoomOut 1s 1s linear 1 alternate, zoomIn 1s linear alternate
+    animation: zoomOut 1s 1s linear 1 alternate, zoomIn 1s linear alternate
 }
 .juflair_pulse {
     animation-name: pulse ;
@@ -131,6 +134,11 @@
     animation-name: shake ;
     animation-duration: 1s;
     
+}
+.juflair_flying{
+    animation-name: flying;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
 /* .Delayed*/
 .juflair_blink1_Delayed{
@@ -237,6 +245,23 @@
     10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
     20%, 40%, 60%, 80% { transform: translateX(10px); }
 }
+/* flying */
+@keyframes flying {
+    from, to { transform: translateY(-25px); }
+    15% {
+        transform: translateY(-23px) translateX(-7px);
+    }
+    30% {
+        transform: translateY(-28px) translateX(-7px);
+    }
+    55% {
+        transform: translateY(-23px) translateX(7px);
+    }
+    70% {
+        transform: translateY(-28px) translateX(7px);
+    }
+}
+
 
 
 

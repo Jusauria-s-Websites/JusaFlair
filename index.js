@@ -13,7 +13,8 @@ let animationsArray=[
     'juflair_blink1_Delayed',
     'juflair_blink2_Delayed',
     'juflair_zoomOut',
-    'juflair_zoomInOut'
+    'juflair_zoomInOut',
+    'juflair_flying'
 ]
 
 function newAdd(addToImage){
