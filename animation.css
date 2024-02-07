@@ -1,23 +1,6 @@
-/* --- Animation types --- */
-.juflair_blink {
-    animation-name: blink ;
-    animation-duration: 1s;
+/* --- Variables --- */
+:root{
 }
-/* .Delayed*/
-.juflair_blink1_Delayed{
-    animation-name: delay-blink ;
-    animation-duration: 1s;
-}
-.juflair_blink2_Delayed{
-    animation-name: delay-blink2 ;
-    animation-duration: 1s;
-}
-
-.juflair_rotate {
-    animation-name: rotate ;
-    animation-duration: 1s;
-}
-
 /* --- Repeats (REP) --- */
 .juflair_rep_inf {
     animation-iteration-count: infinite;
@@ -63,7 +46,14 @@
 .juflair_del_5s {
     animation-delay: 5.5s;
 }
-
+/* --- Hover (hover) --- */
+.juflair_hover:not(:hover){
+    animation-play-state: paused;
+    animation: none;
+}
+.juflair_hover:hover{
+    animation-play-state: running;
+}
 /* --- Speed (SPE) --- */
 .juflair_spe_light {
     animation-duration: .5s;
@@ -80,7 +70,82 @@
 .juflair_spe_slowmotion {
     animation-duration: 5s;
 }
+/* --- Animation types --- */
+.juflair_blink {
+    animation-name: blink ;
+    animation-duration: 1s;
+}
+.juflair_rotate {
+    animation-name: rotate ;
+    animation-duration: 1s;
+    
+}
+.juflair_fadeIn {
+    animation-name: fadeIn ;
+    animation-duration: 1s;
+    
+}
+.juflair_fadeOut {
+    animation-name: fadeOut ;
+    animation-duration: 1s;
+    
+}
+.juflair_slideIn {
+    animation-name: slideIn ;
+    animation-duration: 1s;
+    
+}
+.juflair_slideOut {
+    animation-name: slideOut ;
+    animation-duration: 1s;
+    
+}
+.juflair_scale {
+    animation-name: scale ;
+    animation-duration: 1s;
+    
+}
+.juflair_pulse {
+    animation-name: pulse ;
+    animation-duration: 1s;
+    
+}
+.juflair_bounce {
+    animation-name: bounce ;
+    animation-duration: 1s;
+    
+}
+.juflair_flip {
+    animation-name: flip ;
+    animation-duration: 1s;
+    
+}
+.juflair_shake{
+    animation-name: shake ;
+    animation-duration: 1s;
+    
+}
+/* .Delayed*/
+.juflair_blink1_Delayed{
+    animation-name: delay-blink ;
+    animation-duration: 1s;
+    
+}
+.juflair_blink2_Delayed{
+    animation-name: delay-blink2 ;
+    animation-duration: 1s
+}
+
 /* --- Animation Keyframes --- */
+/* Fade */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
 /* Blink */
 @keyframes blink {
     0% {
@@ -103,11 +168,19 @@
     
     50% { opacity: 0; }
     60% { opacity: 1; }
-
+    
     70% { opacity: 0; }
     80%{ opacity: 1; }
 }
-
+/* Slide */
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+@keyframes slideOut {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
 /* Rotate */
 @keyframes rotate {
     0% {
@@ -117,7 +190,6 @@
         transform: rotate(360deg);
     }
 }
-
 /* Moving */
 @keyframes movingFromBottomrightTOTopLeft{
     0% {
@@ -127,3 +199,33 @@
         background-position: top left;
     }
 }
+/* Scale */
+@keyframes scale {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+@keyframes pulse {
+    0%{ transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+/* bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+/* flip */
+@keyframes flip {
+    from { transform: perspective(400px) rotateY(0); }
+    to { transform: perspective(400px) rotateY(360deg); }
+}
+/* shake */
+@keyframes shake {
+    from, to { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+
+
