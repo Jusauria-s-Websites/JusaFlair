@@ -5,9 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing page</title>
     <link rel="stylesheet" href="./animation.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <p class="juflair_shake juflair_rep_inf ">1</p>
-    <p class="juflair_blink  juflair_rep_inf juflair_hover">1</p>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-12 juflair_blink juflair_rep_inf text-center">Juflair!</h1>
+            <p class="col-12">
+                <h2>Installation:</h2>
+                <p><code>&lt;link rel="stylesheet" href="https://jusauria.github.io/JusaFlair/animation.css"&gt;</code>
+                </p>
+            </p>
+        </div>
+        <div class="row">
+            <h2> Animation Types</h2>
+            <div class="col-7" id="buttons">
+                <script>
+                    let items = [
+                    {id:0, name:'Blink'},
+                    {id:1, name:'Spin' },
+                    {id:2, name:'Fade in' },
+                    {id:3, name:'Fade out' },
+                    {id:4, name:'Slide in' },
+                    {id:5, name:'Slide out' },
+                    {id:6, name:'Zoom in' },
+                    {id:7, name:'Pulse' },
+                    {id:8, name:'Bounce' },
+                    {id:9, name:'Flip' },
+                    {id:10, name:'Shake' },
+                    {id:11, name:'Blink1 delay' },
+                    {id:12, name:'Blink2 delay' },
+                    ]
+                    for(item of items){
+                        let button = document.createElement('button');
+                        button.onclick= createButtonClickHandler(item.id);
+                        button.innerHTML=item.name;
+                        document.getElementById('buttons').append(button);
+                    }
+                    function createButtonClickHandler(itemId) {
+                        return function () {
+                            newAdd(itemId);
+                        };
+                    }
+                </script>
+            </div>
+            <img id="exampleImage" src="./goober.png" alt="goober" class="col-3 jusaflair_rep_inf"
+        </div>
+        <div class="row">
+            <h2> Hover</h2>
+            <p>Animation only plays when you hover with mouse: <span class="special">.juflair_hover</span> </p>
+
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h2>Repeat</h2>
+                <ul>
+                    <li>
+                        <span class="special">.jusaflair_rep_inf</span>: infinity loop
+                    </li>
+                    <li>
+                        <span class="special">.juflair_rep_2 </span>: repeat 2x
+                    </li>
+                    <li>
+                        <span class="special">.juflair_rep_3 </span>: repeat 3x
+                    </li>        
+                </ul>
+            </div>
+            <div class="col-4">
+                <h2>Delay</h2>
+                <ul>
+                    <li>
+                        <span class="special">.jusaflair_del_1 to .jusaflair_del_5</span>: delay time options from 1s to 5s
+                    </li>
+                    <li>
+                        <span class="special">.jusaflair_del_0-5 to .jusaflair_del_5-5</span>: delay time options from 0.5s to 5.5s
+                    </li>    
+                </ul>
+            </div>
+            <div class="col-4">
+                <h2>Speed</h2>
+                <ul>
+                    <li>
+                        <span class="special">.juflair_spe_light </span>: speed 0.2s
+                    </li>
+                    <li>
+                        <span class="special">.juflair_spe_fast </span>: speed 0.5s
+                    </li>
+                    <li>
+                        <span class="special">.juflair_spe_normal (default) </span>: speed 1s
+                    </li>
+                    <li>
+                        <span class="special">.juflair_spe_slow</span>: speed 3s
+                    </li>  
+                    <li>
+                        <span class="special">.juflair_spe_slowmotion </span>: speed 5s
+                    </li>    
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
 </body>
 </html>
