@@ -248,18 +248,8 @@
 /* flying */
 @keyframes flying {
     from, to { transform: translateY(-3px); }
-    15% {
-        transform: translateY(3px) translateX(-7px);
-    }
-    35% {
-        transform: translateY(-5px) translateX(-7px);
-    }
-    65% {
-        transform: translateY(3px) translateX(7px);
-    }
-    85% {
-        transform: translateY(-5px) translateX(7px);
-    }
+    50% {
+        transform: translateY(3px);
 }
 
 
