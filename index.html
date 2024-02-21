@@ -59,7 +59,9 @@
         </div>
         <div class="row">
             <h2>Animations only Text</h2>
-            <p>!!!To make Glitch work add the attribute: data-text="" with the text that should be animated!!!</p>
+            <p>!!!To make Glitch work add the attribute: data-text="" with the text that should be animated!!! <br>
+                !!!To make Typing work add the attribute: style="--n:[numberOfLetters]" with the text that should be animated!!!
+            </p>
             <div class="col-7" id="buttonsSpecial"></div>
             <script>
                 let itemsSpecial = [
@@ -82,11 +84,11 @@
                             image.classList=[''];
                             void image.offsetWidth;
                             image.classList.add(animationsArray[addToImage])
-                            //image.classList=['col-3'];
+                           
                         }
             </script>
             <div class="col-3">
-                <p id="text"  data-text="This is some text.">This is some text.</p>
+                <p id="text" style="--n:20" data-text="This is some text.">This is some text.</p>
             </div>
              
         </div>

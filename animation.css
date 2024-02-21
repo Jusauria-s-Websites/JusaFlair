@@ -164,16 +164,18 @@
     animation: red-glitch 0.4s  linear;
 }
 /* Typing */
-.juflair_typing{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 2px solid black; /* The typwriter cursor */
-    display: inline-block;
-    margin: 0 auto;
-    width: 100%;
-    white-space: nowrap;
+.juflair_typing {
+    color:#0000;
+    background:
+      linear-gradient(-90deg,black 5px,#0000 0) 10px 0,
+      linear-gradient(black 0 0) 0 0;
+    background-size:calc(var(--n)*1ch) 200%;
+    -webkit-background-clip:padding-box,text;
+    background-clip:padding-box,text;
+    background-repeat:no-repeat;
     animation: 
-        typing 2s steps(40, end),
-        blink-caret 1s step-end infinite;
+     blink-caret .7s infinite steps(1),   
+     typing calc(var(--n)*.15s) steps(var(--n)) forwards;
 }
 /* .Delayed*/
 .juflair_blink1_Delayed{
@@ -356,12 +358,8 @@
 }
 /*Typing */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {background-size:0 200%}
 }
-
-/* The typewriter cursor effect */
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
+    50% {background-position:0 -100%,0 0}
 }
