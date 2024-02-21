@@ -167,8 +167,8 @@
 .juflair_typing {
     color:#0000;
     background:
-      linear-gradient(-90deg,black 5px,#0000 0) 10px 0,
-      linear-gradient(black 0 0) 0 0;
+      linear-gradient(-90deg,var(--typeColor) 5px,#0000 0) 10px 0,
+      linear-gradient(var(--typeColor) 0 0) 0 0;
     background-size:calc(var(--n)*1ch) 200%;
     -webkit-background-clip:padding-box,text;
     background-clip:padding-box,text;
@@ -177,6 +177,13 @@
      blink-caret .7s infinite steps(1),   
      typing calc(var(--n)*.15s) steps(var(--n)) forwards;
 }
+/* --- Coloring for Typing --- */
+.juflair_typing.white{
+    background:
+      linear-gradient(-90deg,white 5px,#0000 0) 10px 0,
+      linear-gradient(white 0 0) 0 0;
+}
+
 /* .Delayed*/
 .juflair_blink1_Delayed{
     animation-name: delay-blink ;
@@ -187,6 +194,7 @@
     animation-name: delay-blink2 ;
     animation-duration: 1s
 }
+
 
 /* --- Animation Keyframes --- */
 /* Fade */

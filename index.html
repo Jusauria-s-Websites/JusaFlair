@@ -60,7 +60,7 @@
         <div class="row">
             <h2>Animations only Text</h2>
             <p>!!!To make Glitch work add the attribute: data-text="" with the text that should be animated!!! <br>
-                !!!To make Typing work add the attribute: style="--n:[numberOfLetters]" with the text that should be animated!!!
+                !!!To make Typing work add the attribute: style="--n:[numberOfLetters]; --typeColor: [color]" with the text that should be animated!!!
             </p>
             <div class="col-7" id="buttonsSpecial"></div>
             <script>
@@ -88,9 +88,8 @@
                         }
             </script>
             <div class="col-3">
-                <p id="text" style="--n:20" data-text="This is some text.">This is some text.</p>
+                <p id="text" style="--n:20; --typeColor:blue" data-text="This is some text.">This is some text.</p>
             </div>
-             
         </div>
         <div class="row">
             <h2> Hover</h2>
