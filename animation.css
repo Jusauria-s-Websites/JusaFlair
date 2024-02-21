@@ -1,5 +1,6 @@
 /* --- Variables --- */
 :root{
+    --imgSource:"rawt";
 }
 /* --- Repeats (REP) --- */
 .juflair_rep_inf {
@@ -140,6 +141,40 @@
     animation-duration: 1s;
     animation-timing-function: linear;
 }
+/* Glitch*/
+.juflair_glitch {
+    position: relative;
+    animation: wobble-glitch 0.4s;
+}
+.juflair_glitch:before,
+.juflair_glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateX(0px);
+}
+.juflair_glitch:before {
+    color: aqua;
+    animation: blue-glitch 0.4s  linear;
+}
+.juflair_glitch:after {
+    color:red;
+    animation: red-glitch 0.4s  linear;
+}
+/* Typing */
+.juflair_typing{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 2px solid black; /* The typwriter cursor */
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    white-space: nowrap;
+    animation: 
+        typing 2s steps(40, end),
+        blink-caret 1s step-end infinite;
+}
 /* .Delayed*/
 .juflair_blink1_Delayed{
     animation-name: delay-blink ;
@@ -250,8 +285,83 @@
     from, to { transform: translateY(-3px); }
     50% {
         transform: translateY(3px);
+    }
+}
+/* wobble */
+@keyframes wobble-left {
+    18% {
+        transform: skewX(0);
+    }
+    20%,22% {
+        transform: skewX(30deg);
+    }
+    23%,68% {
+        transform: skewX(0);
+    }
+}
+/* glitch*/
+@keyframes wobble-glitch {
+    18% {
+        transform: skewX(0);
+    }
+    20%,22% {
+        transform: skewX(-30deg);
+    }
+    23%,68% {
+        transform: skewX(0);
+    }
+    70%,73% {
+        transform: skewX(-30deg);
+    }
+    74% {
+        transform: skewX(0);
+    }
+}
+@keyframes blue-glitch {
+    18% {
+        transform: translateX(0px);
+    }
+    20%,22% {
+        transform: translateX(-12px);
+    }
+    23%,68% {
+        transform: translateX(0px);
+    }
+    70%,73% {
+        transform: translateX(-10px);
+    }
+    74% {
+        transform: translateX(0px);
+    }
+}
+@keyframes red-glitch {
+    18% {
+        transform: translateX(0px);
+    }
+    20%,22% {
+        transform: translateX(20px);
+    }
+    23%,68% {
+        transform: translateX(0px);
+    }
+    70%,74% {
+        transform: translateX(18px);
+    }
+    75% {
+        transform: translateX(0px);
+    }
+    100%{
+        color:transparent
+    }
+}
+/*Typing */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
-
-
-
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+}

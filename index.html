@@ -13,15 +13,15 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1 class="col-12 juflair_zoomIn text-center">Juflair!</h1>
+            <h1 class="col-12 juflair_zoomIn text-center">Jusaflair!</h1>
             <p class="col-12">
                 <h2>Installation:</h2>
-                <p><code>&lt;link rel="stylesheet" href="https://jusauria.github.io/JusaFlair/animation.css"&gt;</code>
+                <p><code>&lt;link rel="stylesheet" href="https://jusauria-s-websites.github.io/JusaFlair/animation.css"&gt;</code>
                 </p>
             </p>
         </div>
         <div class="row">
-            <h2> Animation Types</h2>
+            <h2> Animations for Anything</h2>
             <div class="col-7" id="buttons">
                 <script>
                     let items = [
@@ -55,7 +55,40 @@
                     }
                 </script>
             </div>
-            <img id="exampleImage" src="./goober.png" alt="goober" class="col-3"
+            <img id="exampleImage"  src="./goober.png" alt="goober" class="col-3">
+        </div>
+        <div class="row">
+            <h2>Animations only Text</h2>
+            <p>!!!To make Glitch work add the attribute: data-text="" with the text that should be animated!!!</p>
+            <div class="col-7" id="buttonsSpecial"></div>
+            <script>
+                let itemsSpecial = [
+                {id:16, name:'Glitch' },
+                {id:17, name:'Typing' },
+                ]
+                for(item of itemsSpecial){
+                    let button = document.createElement('button');
+                    button.onclick= createButtonClickHandler(item.id);
+                    button.innerHTML=item.name;
+                    document.getElementById('buttonsSpecial').append(button);
+                }
+                function createButtonClickHandler(itemId) {
+                    return function () {
+                        newContainerAdd(itemId)
+                    };
+                }
+                function newContainerAdd(addToImage){
+                            let image = document.getElementById('text');
+                            image.classList=[''];
+                            void image.offsetWidth;
+                            image.classList.add(animationsArray[addToImage])
+                            //image.classList=['col-3'];
+                        }
+            </script>
+            <div class="col-3">
+                <p id="text"  data-text="This is some text.">This is some text.</p>
+            </div>
+             
         </div>
         <div class="row">
             <h2> Hover</h2>
@@ -67,7 +100,7 @@
                 <h2>Repeat</h2>
                 <ul>
                     <li>
-                        <span class="special">.jusaflair_rep_inf</span>: infinity loop
+                        <span class="special">.juflair_rep_inf</span>: infinity loop
                     </li>
                     <li>
                         <span class="special">.juflair_rep_2 </span>: repeat 2x
@@ -81,10 +114,10 @@
                 <h2>Delay</h2>
                 <ul>
                     <li>
-                        <span class="special">.jusaflair_del_1 to .jusaflair_del_5</span>: delay time options from 1s to 5s
+                        <span class="special">.juflair_del_1 to .juflair_del_5</span>: delay time options from 1s to 5s
                     </li>
                     <li>
-                        <span class="special">.jusaflair_del_0-5 to .jusaflair_del_5-5</span>: delay time options from 0.5s to 5.5s
+                        <span class="special">.juflair_del_0-5 to .juflair_del_5-5</span>: delay time options from 0.5s to 5.5s
                     </li>    
                 </ul>
             </div>
@@ -111,9 +144,10 @@
                     </li>  
                 </ul>
             </div>
-            
         </div>
-        
     </div>
+    <footer>
+        Not everything was made by me. Details: <a href="./sources.html">Here</a>
+    </footer>
 </body>
 </html>

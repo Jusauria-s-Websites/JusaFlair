@@ -14,7 +14,9 @@ let animationsArray=[
     'juflair_blink2_Delayed',
     'juflair_zoomOut',
     'juflair_zoomInOut',
-    'juflair_flying'
+    'juflair_flying',
+    'juflair_glitch',
+    'juflair_typing'
 ]
 
 function newAdd(addToImage){
@@ -23,5 +25,4 @@ function newAdd(addToImage){
     void image.offsetWidth;
     image.classList.add(animationsArray[addToImage])
     //image.classList=['col-3'];
-    
 }
