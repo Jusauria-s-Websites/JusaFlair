@@ -167,8 +167,8 @@
 .juflair_typing {
     color:#0000;
     background:
-      linear-gradient(-90deg,var(--typeColor) 5px,#0000 0) 10px 0,
-      linear-gradient(var(--typeColor) 0 0) 0 0;
+      linear-gradient(-90deg,var(--c) 5px,#0000 0) 10px 0,
+      linear-gradient(var(--c) 0 0) 0 0;
     background-size:calc(var(--n)*1ch) 200%;
     -webkit-background-clip:padding-box,text;
     background-clip:padding-box,text;
